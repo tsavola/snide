@@ -244,10 +244,19 @@ func (b *backend) closeConn(conn *net.UnixConn) {
 }
 
 func (b *backend) connect(ctx context.Context, wait chan<- struct{}, backoff uint) {
+	defer close(wait)
+
 	var conn *net.UnixConn
 
+	defer b.mu.Guard(func() {
+		b.conn = conn
+		b.wait = nil
+		if conn != nil {
+			b.backoff = 0
+		}
+	})
+
 	defer func() {
-		defer close(wait)
 		if conn == nil {
 			d := minBackoff << backoff
 			if d > maxBackoff {
@@ -257,14 +266,6 @@ func (b *backend) connect(ctx context.Context, wait chan<- struct{}, backoff uin
 			time.Sleep(d)
 		}
 	}()
-
-	defer b.mu.Guard(func() {
-		b.conn = conn
-		b.wait = nil
-		if conn != nil {
-			b.backoff = 0
-		}
-	})
 
 	addr := &net.UnixAddr{
 		Net:  "unixpacket",

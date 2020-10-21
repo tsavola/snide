@@ -1,0 +1,11 @@
+[Unit]
+Description=SNI Demultiplexer
+Requires=network.target
+After=multi-user.target
+
+[Service]
+Type=exec
+ExecStart=/usr/local/bin/snide -d /etc/snide
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,8 @@
+[frontend]
+net = "tcp4"
+addr = "localhost:4433"
+
+[[backend]]
+addr = "./example.sock"
+names = ["localhost", "example.net", "*.example.net"]
+fallback = true

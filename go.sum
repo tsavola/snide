@@ -1,0 +1,11 @@
+github.com/coreos/go-systemd/v22 v22.0.0 h1:XJIw/+VlJ+87J+doOxznsAWIdmWuViOVhkQamW5YV28=
+github.com/coreos/go-systemd/v22 v22.0.0/go.mod h1:xO0FLkIi5MaZafQlIrOotqXZ90ih+1atmu1JpKERPPk=
+github.com/godbus/dbus/v5 v5.0.3/go.mod h1:xhWf0FNVPg57R7Z0UbKHbJfkEywrmjJnf7w5xrFpKfA=
+github.com/naoina/go-stringutil v0.1.0 h1:rCUeRUHjBjGTSHl0VC00jUPLz8/F9dDzYI70Hzifhks=
+github.com/naoina/go-stringutil v0.1.0/go.mod h1:XJ2SJL9jCtBh+P9q5btrd/Ylo8XwT/h1USek5+NqSA0=
+github.com/naoina/toml v0.1.1 h1:PT/lllxVVN0gzzSqSlHEmP8MJB4MY2U7STGxiouV4X8=
+github.com/naoina/toml v0.1.1/go.mod h1:NBIhNtsFMo3G2szEBne+bO4gS192HuIYRqfvOWb4i1E=
+github.com/tsavola/confi v1.5.0 h1:lbpKR1JO/w9px+vln/6m1EK5ys5vsmjwea+hbFXoVMs=
+github.com/tsavola/confi v1.5.0/go.mod h1:jDz8ndC0blU/9D7QrKGKULsFxiDqoLZ2rCoaC6CsbJ0=
+github.com/tsavola/mu v1.0.0 h1:U0Xhjsfc5gDJHfMjGFK0vByPG9QpxnRJ8P3F2k32KlI=
+github.com/tsavola/mu v1.0.0/go.mod h1:uh+UOPcLhbDz4XoMmPg0/9Rl7BCIV0snqUWQEgZrSXc=

@@ -4,7 +4,7 @@ Requires=network.target
 After=multi-user.target
 
 [Service]
-Type=exec
+Type=notify
 ExecStart=/usr/local/bin/snide -d /etc/snide
 
 [Install]

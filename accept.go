@@ -91,13 +91,17 @@ func (a *Acceptor) Accept() (net.Conn, error) {
 		return nil, err
 	}
 
+	fileConn, err := net.FileConn(files[0])
+	if err != nil {
+		return nil, err
+	}
+
 	conn := &connWrapper{
-		Reader: io.MultiReader(bytes.NewReader(buf), files[0]),
-		File:   files[0],
+		Reader: io.MultiReader(bytes.NewReader(buf), fileConn),
+		Conn:   fileConn,
 		local:  local,
 		remote: remote,
 	}
-	files = nil
 	return conn, nil
 }
 
@@ -143,7 +147,7 @@ func popString(buf []byte) (string, []byte, error) {
 
 type connWrapper struct {
 	io.Reader
-	*os.File
+	net.Conn
 	local  net.Addr
 	remote net.Addr
 }

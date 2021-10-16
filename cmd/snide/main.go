@@ -56,7 +56,7 @@ func main() {
 }
 
 func mainError() error {
-	signals := make(chan os.Signal)
+	signals := make(chan os.Signal, 1)
 	signal.Notify(signals, syscall.SIGINT, syscall.SIGTERM)
 
 	var frontend net.Listener

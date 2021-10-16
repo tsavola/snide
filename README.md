@@ -13,5 +13,5 @@ Get the proxy server:
 go get github.com/tsavola/snide/cmd/snide
 ```
 
-Go API for backends: https://godoc.org/github.com/tsavola/snide
+Go API for backends: https://pkg.dev.go/github.com/tsavola/snide
 

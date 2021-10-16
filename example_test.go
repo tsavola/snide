@@ -2,7 +2,7 @@
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
 
-package main
+package snide_test
 
 import (
 	"fmt"
@@ -15,7 +15,7 @@ import (
 	"github.com/tsavola/snide"
 )
 
-func main() {
+func Example() {
 	l, err := snide.Listen("example.sock")
 	if err != nil {
 		log.Fatal(err)

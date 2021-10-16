@@ -4,8 +4,6 @@
 
 // Package snide provides a network connection listener for implementing
 // backend servers.  Subpackage proxy provides its counterpart.
-//
-// Example code: https://github.com/tsavola/snide/blob/master/internal/example/example.go
 package snide
 
 import (

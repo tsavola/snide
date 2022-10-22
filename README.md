@@ -10,7 +10,7 @@ has been passed to the backend.
 
 Get the proxy server:
 ```
-go get github.com/tsavola/snide/cmd/snide
+go install github.com/tsavola/snide/cmd/snide@latest
 ```
 
 Go API for backends: https://pkg.go.dev/github.com/tsavola/snide
